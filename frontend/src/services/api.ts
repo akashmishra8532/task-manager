@@ -29,13 +29,15 @@ import {
 } from '../types';
 
 // Create axios instance
+// Create axios instance
 const api: AxiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5001/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://task-manager-wbtv.onrender.com/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
 
 // Request interceptor to add auth token
 api.interceptors.request.use(
